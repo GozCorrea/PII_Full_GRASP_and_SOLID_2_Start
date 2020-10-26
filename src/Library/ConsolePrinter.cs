@@ -9,9 +9,9 @@ namespace Full_GRASP_And_SOLID.Library
         // Se le quita la responsabilidad de imprimir a la clase Recipe para cumplir con SRP.
         // Esta clase solo sabe imprimir por consola. Esta clase también cumple con el patrón SRP
         // porque solo se encarga de imprimir la lista ingresada.
-        public static void Printer(List<string> lista)
+        public static void Printer(Recipe recipe)
         {
-            foreach(string elem in lista)
+            foreach(string elem in recipe.Receta())
             {
                 Console.WriteLine(elem);
             }
