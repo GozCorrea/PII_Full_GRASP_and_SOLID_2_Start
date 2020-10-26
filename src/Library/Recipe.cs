@@ -28,7 +28,8 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
-        public List<string> Receta()
+        public List<string> Receta() // Por patrón EXPERT la clase Recipe debe crear la receta porque es esta
+                                     // quien conoce toda la información necesaria.
         {
             recipe.Clear();
             recipe.Add(this.FinalProduct.Description);
@@ -39,9 +40,7 @@ namespace Full_GRASP_And_SOLID.Library
                 
                 recipe.Add(Frase);
             }
-            
             return recipe;
-            
         }
     }
 }
