@@ -15,7 +15,12 @@ namespace Full_GRASP_And_SOLID.Library
             this.Time = time;
             this.Equipment = equipment;
         }
-
+        public string Frase()
+        {
+            string Frase = $"{this.Quantity} de '{this.Input.Description}' "  +
+                    $"usando '{this.Equipment.Description}' durante {this.Time}";
+            return Frase;
+        }
         public Product Input { get; set; }
 
         public double Quantity { get; set; }
